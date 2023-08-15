@@ -7,6 +7,15 @@ import os
 load_dotenv()
 ENGINE = sa.create_engine(os.environ["DATABASE_URL"])
 
+steps = {
+    'pentiton': {
+        'step2a':
+        'step2b': {
+            
+        }
+    }
+}
+
 query = f"""
     select * from (
 	select indexnumberid, fileddate, status, disposedreason from oca_index

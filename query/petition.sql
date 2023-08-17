@@ -2,8 +2,8 @@ with
 	cases as (
 		select * from oca_index
 		where status != 'Active'
+		<<<PLACEHOLDER FOR QUERY>>>
 		and propertytype = 'Residential'
-		and fileddate >= '2022-01-15'
 		and (classification like '%Holdover%' or classification like '%Non-Payment%' or classification like '%Non-Payment%')
 		and (court like 'New York County%' or court like 'Kings County%' or court like 'Bronx County%' or court like 'Richmond County%' or court like 'Queens County%')
 	),
@@ -30,4 +30,4 @@ with
 		group by classification
 	)
 	
-select *, no_appeared/ total::float as percent_no_appear, appeared/total::float as percent_appeared  from query
+select * from query

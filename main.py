@@ -7,14 +7,6 @@ import os
 load_dotenv()
 ENGINE = sa.create_engine(os.environ["DATABASE_URL"])
 
-steps = {
-    'pentiton': {
-        'step2a':
-        'step2b': {
-            
-        }
-    }
-}
 
 query = f"""
     select * from (
@@ -33,3 +25,5 @@ query = f"""
 df = pd.read_sql(text(query), con = ENGINE)
 
 print(df)
+
+print("hello")

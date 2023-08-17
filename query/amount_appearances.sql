@@ -1,8 +1,8 @@
 select classification, 
 	count(indexnumberid) as total,
-	count(indexnumberid) filter (where appearances_num = 1) as app_1,
-	count(indexnumberid) filter (where appearances_num > 1 and appearances_num < 8) as app_2_8,
-	count(indexnumberid) filter (where appearances_num > 8) as app_8_plus
+	count(indexnumberid) filter (where appearances_num = 1) as one_appearance,
+	count(indexnumberid) filter (where appearances_num > 1 and appearances_num < 8) as less_than_median,
+	count(indexnumberid) filter (where appearances_num > 8) as greater_than_median
 	from (
 		select *, filed_date as fileddate from oca_case_summary
 	) as a

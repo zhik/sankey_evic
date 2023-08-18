@@ -9,7 +9,7 @@ select classification,
 	where appearances_num > 0
 	and status != 'Active'
 	<<<PLACEHOLDER FOR QUERY>>>
-	and (classification like '%Holdover%' or classification like '%Non-Payment%' or classification like '%Non-Payment%')
+	and (classification like '%Holdover%' or classification like '%Non-Payment%' or classification like '%NonPayment%')
 	and (court like 'New York County%' or court like 'Kings County%' or court like 'Bronx County%' or 
 	court like 'Richmond County%' or court like 'Queens County%')
 	

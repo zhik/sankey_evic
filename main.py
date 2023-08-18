@@ -9,7 +9,8 @@ ENGINE = sa.create_engine(os.environ["DATABASE_URL"])
 
 queries = [
 	{'id': 'petition', 'next': 'amount_appearances'},
-	{'id': 'amount_appearances', 'next': None}
+	{'id': 'amount_appearances', 'next': 'default_judgments'},
+	{'id': 'default_judgments', 'next': None}
 ]
 
 for query in queries:
